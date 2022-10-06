@@ -1,0 +1,9 @@
+@mixin flexCenter($align, $justify, $direction, $gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+$form-bkg-color: #d4d4d4;

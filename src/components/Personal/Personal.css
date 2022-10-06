@@ -1,0 +1,21 @@
+.personal-information-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 2rem;
+  align-items: stretch;
+}
+
+.personal-information-heading {
+  font-size: 2rem;
+}
+
+.personal-input {
+  padding: 0.5rem;
+}
+
+.personal-input:focus {
+  outline: none;
+}/*# sourceMappingURL=Personal.css.map */

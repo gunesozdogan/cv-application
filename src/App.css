@@ -1,0 +1,21 @@
+* {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.cv-input-section {
+  flex: 1;
+  background-color: #d4d4d4;
+}
+
+.cv-output-section {
+  flex: 1;
+}/*# sourceMappingURL=App.css.map */

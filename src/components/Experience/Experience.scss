@@ -1,0 +1,18 @@
+@import "../../index.scss";
+
+.experience-container {
+    @include flexCenter(center, center, column, 0.7rem);
+    padding: 2rem;
+    align-items: stretch;
+}
+
+.experience-heading {
+    font-size: 2rem;
+}
+.experience-input {
+    padding: 0.5rem;
+}
+
+.experience-input:focus {
+    outline: none;
+}
