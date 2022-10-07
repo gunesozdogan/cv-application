@@ -41,8 +41,10 @@ export default class Education extends Component {
                     className="date-to-input education-input"
                 />
                 <div className="education-btn-container">
-                    <button>Add</button>
-                    <button>Delete</button>
+                    <button className="education-add-btn add-btn">Add</button>
+                    <button className="education-delete-btn delete-btn">
+                        Delete
+                    </button>
                 </div>
             </div>
         );

@@ -1,0 +1,28 @@
+@import "../../index.scss";
+
+.personal-information-container {
+    @include flexCenter(center, center, column, 1rem);
+    padding: 2rem;
+    padding-top: 0;
+    align-items: stretch;
+}
+
+.personal-information-heading {
+    font-size: 1.8rem;
+    color: $form-header-color;
+    font-weight: 600;
+    padding-left: 0.4rem;
+}
+
+.personal-input {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+.personal-input:focus {
+    outline: none;
+}

@@ -3,17 +3,31 @@
 * {
     font-size: 10px;
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .App {
+    @include flexCenter(center, center, column, 2rem);
+    background-color: #bebebe;
+}
+
+main {
     @include flexCenter(center, center, row, 2rem);
+    width: 100%;
+    padding: 4rem 8rem;
 }
 
 .cv-input-section {
     flex: 1;
     background-color: $form-bkg-color;
+    padding: 1.5rem 0.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 25px 1px rgb(97, 97, 97);
 }
 
 .cv-output-section {
     flex: 1;
+    background-color: $form-bkg-color;
 }

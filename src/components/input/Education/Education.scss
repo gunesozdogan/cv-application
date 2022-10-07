@@ -1,0 +1,33 @@
+@import "../../index.scss";
+
+.education-container {
+    @include flexCenter(center, center, column, 1rem);
+    padding: 2rem;
+    padding: 2rem;
+    align-items: stretch;
+}
+
+.education-heading {
+    font-size: 1.8rem;
+    color: $form-header-color;
+    font-weight: 600;
+    padding-left: 0.4rem;
+}
+
+.education-input {
+    padding: 0.5rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+.education-input:focus {
+    outline: none;
+}
+
+.education-btn-container {
+    @include flexCenter(stretch, center, column, 0.5rem);
+}

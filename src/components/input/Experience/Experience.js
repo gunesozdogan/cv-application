@@ -36,8 +36,10 @@ export default class Experience extends Component {
                     className="date-to-input experience-input"
                 />
                 <div className="experience-btn-container">
-                    <button>Add</button>
-                    <button>Delete</button>
+                    <button className="experience-add-btn add-btn">Add</button>
+                    <button className="experience-delete-btn delete-btn">
+                        Delete
+                    </button>
                 </div>
             </div>
         );

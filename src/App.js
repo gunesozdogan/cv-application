@@ -1,17 +1,21 @@
-import Personal from "./components/Personal/Personal";
-import Experience from "./components/Experience/Experience";
-import Education from "./components/Education/Education";
+import Header from "./components/Header/Header";
+import Personal from "./components/input/Personal/Personal";
+import Experience from "./components/input/Experience/Experience";
+import Education from "./components/input/Education/Education";
 import "./App.css";
 
 function App() {
     return (
         <div className="App">
-            <div className="cv-input-section">
-                <Personal />
-                <Experience />
-                <Education />
-            </div>
-            <div className="cv-output-section"></div>
+            <Header />
+            <main>
+                <div className="cv-input-section">
+                    <Personal />
+                    <Experience />
+                    <Education />
+                </div>
+                <div className="cv-output-section"></div>
+            </main>
         </div>
     );
 }

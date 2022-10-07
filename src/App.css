@@ -1,21 +1,39 @@
 * {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #bebebe;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   gap: 2rem;
+  width: 100%;
+  padding: 4rem 8rem;
 }
 
 .cv-input-section {
   flex: 1;
-  background-color: #d4d4d4;
+  background-color: #dddddd;
+  padding: 1.5rem 0.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 25px 1px rgb(97, 97, 97);
 }
 
 .cv-output-section {
   flex: 1;
+  background-color: #dddddd;
 }/*# sourceMappingURL=App.css.map */
