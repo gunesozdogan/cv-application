@@ -1,0 +1,42 @@
+.details-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  flex: 2;
+  align-self: start;
+  min-width: 20rem;
+  height: 100%;
+}
+
+.details-heading {
+  color: #222;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.personal-details-output-heading {
+  font-size: 1.8rem;
+  color: rgb(50, 78, 131);
+}
+
+.address-output-container,
+.phone-num-output-container,
+.email-output-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.address,
+.email,
+.phone-num {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  color: #333;
+  word-break: break-word;
+}/*# sourceMappingURL=Details.css.map */

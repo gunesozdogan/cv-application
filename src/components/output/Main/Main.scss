@@ -1,0 +1,37 @@
+@import "../../../index.scss";
+
+.main-container {
+    @include flexCenter(left, flex-start, column, 2rem);
+    padding: 1.5rem 2rem;
+    flex: 5;
+    height: 100%;
+}
+
+.main-output-heading {
+    font-size: 1.8rem;
+    color: $output-form-sec-color;
+    font-weight: 600;
+}
+
+.description-output-container,
+.experience-output-container,
+.education-output-container {
+    @include flexCenter(left, center, column, 1rem);
+}
+
+.description {
+    min-height: 2rem;
+    font-size: 1.6rem;
+    max-width: 30rem;
+    word-break: break-word;
+}
+
+.experience {
+    min-height: 3rem;
+    max-width: 30rem;
+}
+
+.education {
+    min-height: 30rem;
+    max-width: 30rem;
+}

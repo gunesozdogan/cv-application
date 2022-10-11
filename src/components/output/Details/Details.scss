@@ -1,0 +1,36 @@
+@import "../../../index.scss";
+
+.details-container {
+    @include flexCenter(left, flex-start, column, 2rem);
+    padding: 1.5rem 2rem;
+    flex: 2;
+    align-self: start;
+    min-width: 20rem;
+    height: 100%;
+}
+
+.details-heading {
+    color: $form-header-color;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.personal-details-output-heading {
+    font-size: 1.8rem;
+    color: $output-form-sec-color;
+}
+
+.address-output-container,
+.phone-num-output-container,
+.email-output-container {
+    @include flexCenter(flex-start, center, column, 0.5rem);
+}
+
+.address,
+.email,
+.phone-num {
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    color: $output-form-light-color;
+    word-break: break-word;
+}

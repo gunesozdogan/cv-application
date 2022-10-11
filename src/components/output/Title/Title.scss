@@ -1,0 +1,18 @@
+@import "../../../index.scss";
+
+.title-container {
+    @include flexCenter(left, center, column, 0);
+    background-color: $output-form-sec-color;
+    padding: 1.5rem 2rem;
+    min-height: 10rem;
+}
+
+.full-name {
+    font-size: 3rem;
+    color: #eee;
+}
+
+.title {
+    font-size: 2rem;
+    color: #eee;
+}
