@@ -1,43 +1,43 @@
 .main-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: left;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1.5rem 2rem;
-    flex: 5;
-    height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  flex: 5;
+  height: 100%;
 }
 
 .main-output-heading {
-    font-size: 1.8rem;
-    color: rgb(50, 78, 131);
-    font-weight: 600;
+  font-size: 1.8rem;
+  color: rgb(50, 78, 131);
+  font-weight: 600;
 }
 
 .description-output-container,
 .experience-output-container,
 .education-output-container {
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .description {
-    min-height: 2rem;
-    font-size: 1.6rem;
-    max-width: 30rem;
-    word-break: break-word;
+  min-height: 2rem;
+  font-size: 1.6rem;
+  max-width: 30rem;
+  word-break: break-word;
 }
 
 .experience {
-    min-height: 3rem;
-    max-width: 30rem;
+  min-height: 3rem;
+  max-width: 30rem;
 }
 
 .education {
-    min-height: 30rem;
-    max-width: 30rem;
-} /*# sourceMappingURL=Main.css.map */
+  min-height: 30rem;
+  max-width: 30rem;
+}/*# sourceMappingURL=Main.css.map */

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import ExperienceItem from "./ExperienceItem/ExperienceItem";
 import "./Main.css";
+
 export default class Main extends Component {
     constructor(props) {
         super(props);
@@ -18,7 +20,7 @@ export default class Main extends Component {
                     <h3 className="experience-output-heading main-output-heading">
                         Experience
                     </h3>
-                    <p className="experience"></p>
+                    <ExperienceItem />
                 </div>
                 <div className="education-output-container">
                     <h3 className="education-output-heading main-output-heading">

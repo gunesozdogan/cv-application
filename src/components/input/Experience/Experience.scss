@@ -1,17 +1,21 @@
 @import "../../../index.scss";
 
 .experience-container {
+    @include flexCenter(stretch, center, column, 1rem);
+}
+
+.experience-item-container {
     @include flexCenter(center, center, column, 1rem);
-    padding: 2rem;
-    padding: 2rem;
+    padding: 0 2rem;
     align-items: stretch;
+    padding-bottom: 1rem;
 }
 
 .experience-heading {
     font-size: 1.8rem;
     color: $form-header-color;
     font-weight: 600;
-    padding-left: 0.4rem;
+    padding-left: 2.4rem;
 }
 
 .experience-input {
@@ -30,6 +34,7 @@
 
 .experience-btn-container {
     @include flexCenter(stretch, center, column, 0.5rem);
+    padding: 0 2rem;
 }
 
 .add-btn,
@@ -47,4 +52,8 @@
 .add-btn:hover,
 .delete-btn:hover {
     background-color: #222;
+}
+
+.add-btn {
+    margin-top: -1.5rem;
 }

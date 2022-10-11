@@ -1,19 +1,27 @@
 .experience-container {
   display: flex;
   justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.experience-item-container {
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  padding: 2rem;
-  padding: 2rem;
+  padding: 0 2rem;
   align-items: stretch;
+  padding-bottom: 1rem;
 }
 
 .experience-heading {
   font-size: 1.8rem;
   color: #222;
   font-weight: 600;
-  padding-left: 0.4rem;
+  padding-left: 2.4rem;
 }
 
 .experience-input {
@@ -36,6 +44,7 @@
   align-items: stretch;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 0 2rem;
 }
 
 .add-btn,
@@ -53,4 +62,8 @@
 .add-btn:hover,
 .delete-btn:hover {
   background-color: #222;
+}
+
+.add-btn {
+  margin-top: -1.5rem;
 }/*# sourceMappingURL=Experience.css.map */

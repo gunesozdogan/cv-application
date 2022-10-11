@@ -20,6 +20,7 @@ export default class App extends Component {
             phoneNum: "",
             email: "",
             description: "",
+            experiences: [{}],
         };
 
         this.firstNameChangeHandler = this.firstNameChangeHandler.bind(this);
@@ -30,6 +31,8 @@ export default class App extends Component {
         this.emailChangeHandler = this.emailChangeHandler.bind(this);
         this.descriptionChangeHandler =
             this.descriptionChangeHandler.bind(this);
+        this.addExperienceHandler = this.addExperienceHandler.bind(this);
+        this.removeExperienceHandler = this.removeExperienceHandler.bind(this);
     }
 
     firstNameChangeHandler(e) {
@@ -74,6 +77,22 @@ export default class App extends Component {
         });
     }
 
+    addExperienceHandler() {
+        this.setState(prev => ({
+            experiences: prev.experiences.concat([{}]),
+        }));
+    }
+
+    removeExperienceHandler(e) {
+        const clickedElIndex = e.target.getAttribute("data-key");
+        this.setState(prev => ({
+            experiences: prev.experiences.filter((item, index) => {
+                console.log(index);
+                return index !== clickedElIndex;
+            }),
+        }));
+    }
+
     render() {
         return (
             <div className="App">
@@ -91,7 +110,13 @@ export default class App extends Component {
                                 this.descriptionChangeHandler
                             }
                         />
-                        <Experience />
+                        <Experience
+                            experiences={this.state.experiences}
+                            addExperienceHandler={this.addExperienceHandler}
+                            removeExperienceHandler={
+                                this.removeExperienceHandler
+                            }
+                        />
                         <Education />
                     </div>
                     <div className="cv-output-section">
