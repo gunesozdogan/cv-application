@@ -31,14 +31,13 @@ export default class Experience extends Component {
                         toChangeHandler={this.props.toChangeHandler}
                     />
                 ))}
-                <div className="experience-btn-container">
-                    <button
-                        onClick={this.props.addExperienceHandler}
-                        className="experience-add-btn add-btn"
-                    >
-                        Add
-                    </button>
-                </div>
+
+                <button
+                    onClick={this.props.addExperienceHandler}
+                    className="experience-add-btn add-btn"
+                >
+                    Add
+                </button>
             </div>
         );
     }

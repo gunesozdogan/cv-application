@@ -23,8 +23,21 @@ export default class App extends Component {
             experiences: [
                 { position: "", company: "", city: "", from: "", to: "" },
             ],
+            addedExperiences: [],
+            educations: [
+                {
+                    name: "",
+                    city: "",
+                    degree: "",
+                    subject: "",
+                    from: "",
+                    to: "",
+                },
+            ],
+            addedEducations: [],
         };
 
+        // Personal information
         this.firstNameChangeHandler = this.firstNameChangeHandler.bind(this);
         this.lastNameChangeHandler = this.lastNameChangeHandler.bind(this);
         this.titleChangeHandler = this.titleChangeHandler.bind(this);
@@ -33,6 +46,8 @@ export default class App extends Component {
         this.emailChangeHandler = this.emailChangeHandler.bind(this);
         this.descriptionChangeHandler =
             this.descriptionChangeHandler.bind(this);
+
+        // Experience section
         this.addExperienceHandler = this.addExperienceHandler.bind(this);
         this.removeExperienceHandler = this.removeExperienceHandler.bind(this);
         this.positionChangeHandler = this.positionChangeHandler.bind(this);
@@ -40,6 +55,20 @@ export default class App extends Component {
         this.cityChangeHandler = this.cityChangeHandler.bind(this);
         this.fromChangeHandler = this.fromChangeHandler.bind(this);
         this.toChangeHandler = this.toChangeHandler.bind(this);
+
+        // Education section
+        this.addEducationHandler = this.addEducationHandler.bind(this);
+        this.removeEducationHandler = this.removeEducationHandler.bind(this);
+        // this.universityNameChangeHandler =
+        //     this.universityNameChangeHandler.bind(this);
+        // this.educationCityChangeHandler =
+        //     this.educationCityChangeHandler.bind(this);
+        // this.degreeChangeHandler = this.degreeChangeHandler.bind(this);
+        // this.subjectChangeHandler = this.subjectChangeHandler.bind(this);
+        // this.educationFromChangeHandler =
+        //     this.educationFromChangeHandler.bind(this);
+        // this.educationToChangeHandler =
+        //     this.educationToChangeHandler.bind(this);
     }
 
     firstNameChangeHandler(e) {
@@ -84,6 +113,7 @@ export default class App extends Component {
         });
     }
 
+    // EXPERIENCES
     addExperienceHandler() {
         this.setState(prev => ({
             experiences: prev.experiences.concat([
@@ -167,6 +197,31 @@ export default class App extends Component {
         });
     }
 
+    // EDUCATIONS
+    addEducationHandler() {
+        this.setState(prev => ({
+            educations: prev.educations.concat([
+                {
+                    name: "",
+                    city: "",
+                    degree: "",
+                    subject: "",
+                    from: "",
+                    to: "",
+                },
+            ]),
+        }));
+    }
+
+    removeEducationHandler(e) {
+        const clickedElIndex = e.target.getAttribute("data-key");
+        this.setState(prev => ({
+            experiences: prev.experiences.filter((item, index) => {
+                console.log(index);
+                return Number(index) !== Number(clickedElIndex);
+            }),
+        }));
+    }
     render() {
         return (
             <div className="App">
@@ -196,7 +251,11 @@ export default class App extends Component {
                             fromChangeHandler={this.fromChangeHandler}
                             toChangeHandler={this.toChangeHandler}
                         />
-                        <Education />
+                        <Education
+                            educations={this.state.educations}
+                            addEducationHandler={this.addEducationHandler}
+                            removeEducationHandler={this.removeEducationHandler}
+                        />
                     </div>
                     <div className="cv-output-section">
                         <Title
