@@ -20,7 +20,9 @@ export default class App extends Component {
             phoneNum: "",
             email: "",
             description: "",
-            experiences: [{}],
+            experiences: [
+                { position: "", company: "", city: "", from: "", to: "" },
+            ],
         };
 
         this.firstNameChangeHandler = this.firstNameChangeHandler.bind(this);
@@ -33,6 +35,11 @@ export default class App extends Component {
             this.descriptionChangeHandler.bind(this);
         this.addExperienceHandler = this.addExperienceHandler.bind(this);
         this.removeExperienceHandler = this.removeExperienceHandler.bind(this);
+        this.positionChangeHandler = this.positionChangeHandler.bind(this);
+        this.companyChangeHandler = this.companyChangeHandler.bind(this);
+        this.cityChangeHandler = this.cityChangeHandler.bind(this);
+        this.fromChangeHandler = this.fromChangeHandler.bind(this);
+        this.toChangeHandler = this.toChangeHandler.bind(this);
     }
 
     firstNameChangeHandler(e) {
@@ -79,7 +86,9 @@ export default class App extends Component {
 
     addExperienceHandler() {
         this.setState(prev => ({
-            experiences: prev.experiences.concat([{}]),
+            experiences: prev.experiences.concat([
+                { position: "", company: "", city: "", from: "", to: "" },
+            ]),
         }));
     }
 
@@ -88,9 +97,74 @@ export default class App extends Component {
         this.setState(prev => ({
             experiences: prev.experiences.filter((item, index) => {
                 console.log(index);
-                return index !== clickedElIndex;
+                return Number(index) !== Number(clickedElIndex);
             }),
         }));
+    }
+
+    // Helper function for updating experiences state copy
+    updateExperiencesCopy(e, state, key) {
+        const experiencesCopy = state.experiences.slice();
+        const index = e.target.parentNode.getAttribute("data-key");
+        experiencesCopy[index][key] = e.target.value;
+
+        return experiencesCopy;
+    }
+
+    positionChangeHandler(e) {
+        const updatedExperiencesCopy = this.updateExperiencesCopy(
+            e,
+            this.state,
+            "position"
+        );
+        this.setState({
+            experiences: updatedExperiencesCopy,
+        });
+    }
+
+    companyChangeHandler(e) {
+        const updatedExperiencesCopy = this.updateExperiencesCopy(
+            e,
+            this.state,
+            "company"
+        );
+        this.setState({
+            experiences: updatedExperiencesCopy,
+        });
+    }
+
+    cityChangeHandler(e) {
+        const updatedExperiencesCopy = this.updateExperiencesCopy(
+            e,
+            this.state,
+            "city"
+        );
+        this.setState({
+            experiences: updatedExperiencesCopy,
+        });
+    }
+
+    fromChangeHandler(e) {
+        const updatedExperiencesCopy = this.updateExperiencesCopy(
+            e,
+            this.state,
+            "from"
+        );
+        this.setState({
+            experiences: updatedExperiencesCopy,
+        });
+    }
+
+    toChangeHandler(e) {
+        const updatedExperiencesCopy = this.updateExperiencesCopy(
+            e,
+            this.state,
+            "to"
+        );
+        console.log(this.state.experiences);
+        this.setState({
+            experiences: updatedExperiencesCopy,
+        });
     }
 
     render() {
@@ -116,6 +190,11 @@ export default class App extends Component {
                             removeExperienceHandler={
                                 this.removeExperienceHandler
                             }
+                            positionChangeHandler={this.positionChangeHandler}
+                            companyChangeHandler={this.companyChangeHandler}
+                            cityChangeHandler={this.cityChangeHandler}
+                            fromChangeHandler={this.fromChangeHandler}
+                            toChangeHandler={this.toChangeHandler}
                         />
                         <Education />
                     </div>

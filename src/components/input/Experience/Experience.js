@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ExperienceInputItem from "./ExperienceInputItem/ExperienceInputItem";
+import ExperienceInputItem from "./ExperienceInputItem";
 
 import "./Experience.css";
 
@@ -16,9 +16,19 @@ export default class Experience extends Component {
                     <ExperienceInputItem
                         key={index}
                         index={index}
+                        position={item.position}
+                        company={item.company}
+                        city={item.city}
+                        from={item.from}
+                        to={item.to}
                         removeExperienceHandler={
                             this.props.removeExperienceHandler
                         }
+                        positionChangeHandler={this.props.positionChangeHandler}
+                        companyChangeHandler={this.props.companyChangeHandler}
+                        cityChangeHandler={this.props.cityChangeHandler}
+                        fromChangeHandler={this.props.fromChangeHandler}
+                        toChangeHandler={this.props.toChangeHandler}
                     />
                 ))}
                 <div className="experience-btn-container">
