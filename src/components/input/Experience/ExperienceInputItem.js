@@ -17,6 +17,7 @@ export default class ExperienceInputItem extends Component {
                     className="position-input experience-input"
                     onChange={this.props.positionChangeHandler}
                     value={this.props.position}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -24,6 +25,7 @@ export default class ExperienceInputItem extends Component {
                     className="Company-input experience-input"
                     onChange={this.props.companyChangeHandler}
                     value={this.props.company}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -31,6 +33,7 @@ export default class ExperienceInputItem extends Component {
                     className="city-input experience-input"
                     onChange={this.props.cityChangeHandler}
                     value={this.props.city}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -38,6 +41,7 @@ export default class ExperienceInputItem extends Component {
                     className="date-from-input experience-input"
                     onChange={this.props.fromChangeHandler}
                     value={this.props.from}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -45,6 +49,7 @@ export default class ExperienceInputItem extends Component {
                     className="date-to-input experience-input"
                     onChange={this.props.toChangeHandler}
                     value={this.props.to}
+                    spellCheck="false"
                 />
                 <button
                     onClick={this.props.removeExperienceHandler}

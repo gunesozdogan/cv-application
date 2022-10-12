@@ -18,6 +18,7 @@ export default class EducationInputItem extends Component {
                     className="university-name-input education-input"
                     value={this.props.name}
                     onChange={this.props.nameChangeHandler}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -25,6 +26,7 @@ export default class EducationInputItem extends Component {
                     className="city-input education-input"
                     value={this.props.city}
                     onChange={this.props.cityChangeHandler}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -32,6 +34,7 @@ export default class EducationInputItem extends Component {
                     className="degree-input education-input"
                     value={this.props.degree}
                     onChange={this.props.degreeChangeHandler}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -39,6 +42,7 @@ export default class EducationInputItem extends Component {
                     className="subject-input education-input"
                     value={this.props.subject}
                     onChange={this.props.subjectChangeHandler}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -46,6 +50,7 @@ export default class EducationInputItem extends Component {
                     className="date-from-input education-input"
                     value={this.props.from}
                     onChange={this.props.fromChangeHandler}
+                    spellCheck="false"
                 />
                 <input
                     type="text"
@@ -53,6 +58,7 @@ export default class EducationInputItem extends Component {
                     className="date-to-input education-input"
                     value={this.props.to}
                     onChange={this.props.toChangeHandler}
+                    spellCheck="false"
                 />
 
                 <button
