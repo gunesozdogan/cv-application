@@ -21,9 +21,15 @@ export default class Education extends Component {
                         city={item.city}
                         from={item.from}
                         to={item.to}
-                        removeExperienceHandler={
-                            this.props.removeExperienceHandler
+                        removeEducationHandler={
+                            this.props.removeEducationHandler
                         }
+                        nameChangeHandler={this.props.nameChangeHandler}
+                        cityChangeHandler={this.props.cityChangeHandler}
+                        subjectChangeHandler={this.props.subjectChangeHandler}
+                        degreeChangeHandler={this.props.degreeChangeHandler}
+                        fromChangeHandler={this.props.fromChangeHandler}
+                        toChangeHandler={this.props.toChangeHandler}
                     />
                 ))}
                 <button

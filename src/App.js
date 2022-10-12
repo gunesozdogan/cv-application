@@ -59,16 +59,16 @@ export default class App extends Component {
         // Education section
         this.addEducationHandler = this.addEducationHandler.bind(this);
         this.removeEducationHandler = this.removeEducationHandler.bind(this);
-        // this.universityNameChangeHandler =
-        //     this.universityNameChangeHandler.bind(this);
-        // this.educationCityChangeHandler =
-        //     this.educationCityChangeHandler.bind(this);
-        // this.degreeChangeHandler = this.degreeChangeHandler.bind(this);
-        // this.subjectChangeHandler = this.subjectChangeHandler.bind(this);
-        // this.educationFromChangeHandler =
-        //     this.educationFromChangeHandler.bind(this);
-        // this.educationToChangeHandler =
-        //     this.educationToChangeHandler.bind(this);
+        this.universityNameChangeHandler =
+            this.universityNameChangeHandler.bind(this);
+        this.educationCityChangeHandler =
+            this.educationCityChangeHandler.bind(this);
+        this.degreeChangeHandler = this.degreeChangeHandler.bind(this);
+        this.subjectChangeHandler = this.subjectChangeHandler.bind(this);
+        this.educationFromChangeHandler =
+            this.educationFromChangeHandler.bind(this);
+        this.educationToChangeHandler =
+            this.educationToChangeHandler.bind(this);
     }
 
     firstNameChangeHandler(e) {
@@ -216,12 +216,90 @@ export default class App extends Component {
     removeEducationHandler(e) {
         const clickedElIndex = e.target.getAttribute("data-key");
         this.setState(prev => ({
-            experiences: prev.experiences.filter((item, index) => {
-                console.log(index);
+            educations: prev.educations.filter((item, index) => {
                 return Number(index) !== Number(clickedElIndex);
             }),
         }));
     }
+
+    // Helper function for updating experiences state copy
+    updateEducationCopy(e, state, key) {
+        const educationCopy = state.educations.slice();
+        const index = e.target.parentNode.getAttribute("data-key");
+        educationCopy[index][key] = e.target.value;
+
+        return educationCopy;
+    }
+
+    universityNameChangeHandler(e) {
+        const updatedEducationsCopy = this.updateEducationCopy(
+            e,
+            this.state,
+            "name"
+        );
+        console.log(this.state.educations);
+        this.setState({
+            educations: updatedEducationsCopy,
+        });
+    }
+
+    educationCityChangeHandler(e) {
+        const updatedEducationsCopy = this.updateEducationCopy(
+            e,
+            this.state,
+            "city"
+        );
+        this.setState({
+            educations: updatedEducationsCopy,
+        });
+    }
+
+    degreeChangeHandler(e) {
+        const updatedEducationsCopy = this.updateEducationCopy(
+            e,
+            this.state,
+            "degree"
+        );
+        this.setState({
+            educations: updatedEducationsCopy,
+        });
+    }
+
+    subjectChangeHandler(e) {
+        const updatedEducationsCopy = this.updateEducationCopy(
+            e,
+            this.state,
+            "subject"
+        );
+        this.setState({
+            educations: updatedEducationsCopy,
+        });
+    }
+
+    educationFromChangeHandler(e) {
+        const updatedEducationsCopy = this.updateEducationCopy(
+            e,
+            this.state,
+            "from"
+        );
+
+        this.setState({
+            educations: updatedEducationsCopy,
+        });
+    }
+
+    educationToChangeHandler(e) {
+        const updatedEducationsCopy = this.updateEducationCopy(
+            e,
+            this.state,
+            "to"
+        );
+        console.log(this.state.educations);
+        this.setState({
+            educations: updatedEducationsCopy,
+        });
+    }
+
     render() {
         return (
             <div className="App">
@@ -255,6 +333,12 @@ export default class App extends Component {
                             educations={this.state.educations}
                             addEducationHandler={this.addEducationHandler}
                             removeEducationHandler={this.removeEducationHandler}
+                            nameChangeHandler={this.universityNameChangeHandler}
+                            cityChangeHandler={this.educationCityChangeHandler}
+                            subjectChangeHandler={this.subjectChangeHandler}
+                            degreeChangeHandler={this.degreeChangeHandler}
+                            fromChangeHandler={this.educationFromChangeHandler}
+                            toChangeHandler={this.educationToChangeHandler}
                         />
                     </div>
                     <div className="cv-output-section">
