@@ -1,11 +1,11 @@
 # CV CREATOR
 
 <a href="https://gunesozdogan.github.io/cv-application/" name="demo">Live Demo</a>
-An application for creating a cv.
+An application for creating a CV.
 
 ## Functionalities
 
-Fill the inputs and display your cv output immediately.
+Fill the inputs and display your CV output immediately.
 
 ## Tools
 
