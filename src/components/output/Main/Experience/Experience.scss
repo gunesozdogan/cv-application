@@ -1,0 +1,27 @@
+@import "../../../../index.scss";
+
+.outer-experience-container {
+    @include flexCenter(flex-start, center, column, 2rem);
+}
+.experience-item {
+    @include flexCenter(flex-start, flex-start, row, 2rem);
+}
+
+.experience-right {
+    @include flexCenter(flex-start, center, column, 0.5rem);
+    min-width: 18rem;
+}
+
+.date-from-to {
+    min-width: 10rem;
+    font-size: 1.4rem;
+}
+
+.position {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.company-city {
+    font-size: 1.4rem;
+}

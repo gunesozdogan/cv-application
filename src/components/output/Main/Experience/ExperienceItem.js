@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Experience.css";
 
 export default class ExperienceItem extends Component {
     constructor(props) {
@@ -9,16 +10,18 @@ export default class ExperienceItem extends Component {
         return (
             <div className="experience-item">
                 <span className="date-from-to">
-                    {this.props.dateFrom} {this.props.dateTo}
+                    {this.props.from
+                        ? this.props.from + " - " + this.props.to
+                        : ""}
                 </span>
                 <div className="experience-right">
                     <span className="position">{this.props.position}</span>
                     <span className="company-city">
-                        {this.props.company}
-                        {this.props.city}
+                        {this.props.company
+                            ? this.props.company + ", " + this.props.city
+                            : ""}
                     </span>
                 </div>
-                <div></div>
             </div>
         );
     }

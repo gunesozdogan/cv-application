@@ -1,0 +1,23 @@
+@import "../../../../index.scss";
+
+.outer-education-container {
+    @include flexCenter(flex-start, center, column, 2rem);
+}
+
+.education-item {
+    @include flexCenter(flex-start, center, row, 2rem);
+}
+
+.education-right {
+    @include flexCenter(flex-start, flex-start, column, 0.5rem);
+}
+
+.name-city,
+.degree,
+.subject {
+    font-size: 1.4rem;
+}
+
+.name-city {
+    font-weight: 500;
+}

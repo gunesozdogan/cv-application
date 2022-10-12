@@ -1,0 +1,38 @@
+.outer-experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.experience-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 18rem;
+}
+
+.date-from-to {
+  min-width: 10rem;
+  font-size: 1.4rem;
+}
+
+.position {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.company-city {
+  font-size: 1.4rem;
+}/*# sourceMappingURL=Experience.css.map */

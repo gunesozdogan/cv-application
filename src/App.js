@@ -23,7 +23,7 @@ export default class App extends Component {
             experiences: [
                 { position: "", company: "", city: "", from: "", to: "" },
             ],
-            addedExperiences: [],
+
             educations: [
                 {
                     name: "",
@@ -34,7 +34,6 @@ export default class App extends Component {
                     to: "",
                 },
             ],
-            addedEducations: [],
         };
 
         // Personal information
@@ -348,7 +347,11 @@ export default class App extends Component {
                             title={this.state.title}
                         />
                         <div className="output-main-container">
-                            <Main description={this.state.description} />
+                            <Main
+                                description={this.state.description}
+                                experiences={this.state.experiences}
+                                educations={this.state.educations}
+                            />
                             <Details
                                 address={this.state.address}
                                 phoneNum={this.state.phoneNum}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import ExperienceItem from "./ExperienceItem/ExperienceItem";
+import Experience from "./Experience/Experience";
+import Education from "./Education/Education";
 import "./Main.css";
 
 export default class Main extends Component {
@@ -20,13 +21,13 @@ export default class Main extends Component {
                     <h3 className="experience-output-heading main-output-heading">
                         Experience
                     </h3>
-                    <ExperienceItem />
+                    <Experience experiences={this.props.experiences} />
                 </div>
                 <div className="education-output-container">
                     <h3 className="education-output-heading main-output-heading">
                         Education
                     </h3>
-                    <p className="education"></p>
+                    <Education educations={this.props.educations} />
                 </div>
             </div>
         );

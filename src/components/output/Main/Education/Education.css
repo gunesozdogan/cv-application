@@ -1,0 +1,33 @@
+.outer-education-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.education-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name-city,
+.degree,
+.subject {
+  font-size: 1.4rem;
+}
+
+.name-city {
+  font-weight: 500;
+}/*# sourceMappingURL=Education.css.map */
